@@ -1,69 +1,90 @@
 package main
 
 import (
-  "log"
-  "net/http"
-  "fmt"
-  "github.com/gorilla/mux"
-  "bufio"
-  "os"
+	"bufio"
+	"fmt"
+	"log"
+	"net/http"
+	"os"
+
+	"github.com/gorilla/mux"
 )
 
 type Drink struct {
-  name string
-  ing string
+	img  string
+	name string
+	time string
+	ing  string
+	dir  string
 }
 
-  var a []Drink
+var a []Drink
+var img string
+var name string
+var time string
+var ing string
+var dir string
 
 func main() {
-  ReadFile()
-  s := &Drink{"Bob", "gaysex"}
-  router := mux.NewRouter().StrictSlash(true)
-  router.HandleFunc("/", s.Index)
-  router.HandleFunc("/todos", TodoIndex)
-  router.HandleFunc("/todos/{todoId}", TodoShow)
+	ReadFile()
+	router := mux.NewRouter().StrictSlash(true)
+	router.HandleFunc("/", Index)
+	router.HandleFunc("/todos", TodoIndex)
+	router.HandleFunc("/todos/{todoId}", TodoShow)
 
-log.Fatal(http.ListenAndServe(":8080", router))
+	log.Fatal(http.ListenAndServe(":8080", router))
 }
 
 func ReadFile() {
-file, err := os.Open("filein.txt")
-   if err != nil {
-       log.Fatal(err)
-   }
-   defer file.Close()
+	file, err := os.Open("unforgettables.txt")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer file.Close()
 
-   scanner := bufio.NewScanner(file)
-   for scanner.Scan() {
-       if scanner.Text()[0] == '0'{
-         s := Drink{scanner.Text()[1:], ""}
-         a = append(a,s)
-       }
-   }
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+    if scanner.Text()[0] == '0' {
+			img = scanner.Text()[2:]
+		}
+    if scanner.Text()[0] == '1' {
+			name = scanner.Text()[2:]
+		}
+    if scanner.Text()[0] == '2' {
+			time = scanner.Text()[2:]
+		}
+    if scanner.Text()[0] == '3' {
+			ing = scanner.Text()[2:]
+		}
+    if scanner.Text()[0] == '4' {
+			dir = scanner.Text()[2:]
+      s := Drink{img,name,time,ing,dir}
+			a = append(a, s)
+		}
+	}
 
-   if err := scanner.Err(); err != nil {
-       log.Fatal(err)
-   }
+	if err := scanner.Err(); err != nil {
+		log.Fatal(err)
+	}
 
 }
 
-func (s *Drink) Index(w http.ResponseWriter, r *http.Request) {
-
-fmt.Fprintln(w, s.name)
-fmt.Fprintln(w, s.ing)
+func Index(w http.ResponseWriter, r *http.Request) {
 
 }
-
 
 func TodoIndex(w http.ResponseWriter, r *http.Request) {
-  fmt.Fprintln(w, a[0].name)
-  fmt.Fprintln(w, a[1].name)
+  for i:=0;i<len(a);i++ {
+  fmt.Fprintln(w, a[i].img)
+  fmt.Fprintln(w, a[i].name)
+  fmt.Fprintln(w, a[i].time)
+  fmt.Fprintln(w, a[i].ing)
+  fmt.Fprintln(w, a[i].dir)
+ }
 }
 
-
 func TodoShow(w http.ResponseWriter, r *http.Request) {
-   vars := mux.Vars(r)
-   todoId := vars["todoId"]
-   fmt.Fprintln(w, "Todo show:", todoId)
+	vars := mux.Vars(r)
+	todoId := vars["todoId"]
+	fmt.Fprintln(w, "Todo show:", todoId)
 }
