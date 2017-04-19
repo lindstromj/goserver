@@ -54,12 +54,14 @@ func ReadFile() {
 			time = scanner.Text()[2:]
 		}
     if scanner.Text()[0] == '3' {
-			ing = scanner.Text()[2:]
+			ing += scanner.Text()[2:]
+			ing += ","
 		}
     if scanner.Text()[0] == '4' {
 			dir = scanner.Text()[2:]
       s := Drink{img,name,time,ing,dir}
 			a = append(a, s)
+			name = ""
 		}
 	}
 
@@ -89,6 +91,10 @@ func GetMatches(w http.ResponseWriter, r *http.Request) {
 	ingList := vars["inglist"]
   ingArray = strings.Split(ingList,"+")
   for i:=0;i<len(ingArray);i++ {
-  fmt.Fprintln(w, ingArray[i])
-  }
+		for j:=0;j<len(a);j++ {
+			if strings.Contains(a[j].ing, ingArray[i]) {
+				fmt.Fprintln(w, a[j].name)
+			}
+		}
+	}
 }
