@@ -6,7 +6,7 @@ import (
 	"log"
 	"net/http"
 	"os"
-
+  "strings"
 	"github.com/gorilla/mux"
 )
 
@@ -30,7 +30,7 @@ func main() {
 	router := mux.NewRouter().StrictSlash(true)
 	router.HandleFunc("/", Index)
 	router.HandleFunc("/todos", TodoIndex)
-	router.HandleFunc("/todos/{todoId}", TodoShow)
+	router.HandleFunc("/GET/{inglist}", GetMatches)
 
 	log.Fatal(http.ListenAndServe(":8080", router))
 }
@@ -83,8 +83,12 @@ func TodoIndex(w http.ResponseWriter, r *http.Request) {
  }
 }
 
-func TodoShow(w http.ResponseWriter, r *http.Request) {
+func GetMatches(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
-	todoId := vars["todoId"]
-	fmt.Fprintln(w, "Todo show:", todoId)
+  var ingArray []string
+	ingList := vars["inglist"]
+  ingArray = strings.Split(ingList,"+")
+  for i:=0;i<len(ingArray);i++ {
+  fmt.Fprintln(w, ingArray[i])
+  }
 }
