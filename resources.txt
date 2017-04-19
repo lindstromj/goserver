@@ -1,0 +1,2 @@
+https://dinosaurscode.xyz/go/2016/06/19/golang-mysql-authentication/
+http://www.gorillatoolkit.org/pkg/mux

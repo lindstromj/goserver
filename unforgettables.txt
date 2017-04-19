@@ -1,0 +1,219 @@
+0:http://iba-world.com/wp-content/uploads/2015/08/alexander.jpg
+1:Alexander
+2:After Dinner Cocktail
+3:3 cl Cognac
+3:3 cl Créme de Cacao (brown)
+3:3 cl Fresh cream
+2:Shake and strain into a chilled cocktail glass. Sprinkle with fresh ground nutmeg.
+0:http://iba-world.com/wp-content/uploads/2015/08/americano.jpg
+1:Americano
+2:Before Dinner Cocktail
+3:3 cl Campari
+3:3 cl Red Vermouth
+3:A splash of soda water
+2:Mix the ingredients directly in an old-fashioned glass filled with ice-cubes, add a splash of soda water and garnish with half orange slice.
+0:http://iba-world.com/wp-content/uploads/2015/08/angel_face.jpg
+1:Angel Face
+3:3 cl Calvados
+3:3 cl Gin
+3:3 cl Apricot brandy
+2:Pour all ingredients into a shaker with ice. Shake. Strain into a cocktail glass.
+0:http://iba-world.com/wp-content/uploads/2015/08/aviation.jpg
+1:Aviation
+2:All Day Cocktail
+3:4.5 cl Gin
+3:1.5 cl Maraschino
+3:1.5 cl Fresh lemon juice
+2:Shake and strain into a chilled cocktail glass.
+0:http://iba-world.com/wp-content/uploads/2015/08/bacardi2.jpg
+1:Bacardi
+2:Before Dinner Cocktail
+3:4.5 cl Bacardi Carta Blanca
+3:2 cl Fresh lime juice
+3:1 cl Grenadine
+2:Pour all ingredients into shaker with ice cubes, shake well, strain into chilled cocktail glass.
+0:http://iba-world.com/wp-content/uploads/2015/08/between_sheets.jpg
+1:Between The Sheets
+2:All Day Cocktail
+3:3 cl Cognac
+3:3 cl White Rum
+3:3 cl Triple Sec
+3:2 cl Fresh lemon juice
+2:Pour all ingredients into shaker with ice cubes, shake, strain into chilled cocktail glass.
+0:http://iba-world.com/wp-content/uploads/2015/08/casino.jpg
+1:Casino
+3:4 cl Old Tom Gin
+3:1 cl Maraschino
+3:1 cl Orange Bitters
+3:1 cl Fresh lemon Juice
+2:Pour all ingredients into shaker with ice cubes, shake well. Strain into chilled cocktail glass and garnish with a lemon twist and a marachino cherry.
+0:http://iba-world.com/wp-content/uploads/2015/08/clover_club.jpg
+1:Clover Club
+2:All Day Cocktail
+3:4.5 cl Gin
+3:1.5 cl Raspberry syrup
+3:1.5 cl Fresh lemon Juice
+3:Few drops of Egg White
+2:Pour all ingredients into cocktail shaker filled with ice. Shake well. Strain into cocktail glass.
+0:http://iba-world.com/wp-content/uploads/2015/08/daiquiri.jpg
+1:Daiquiri
+3:4.5 cl White rum
+3:1.5 cl Simple syrup
+3:2.5 cl Fresh lime juice
+2:Shake and strain into a cocktail glass.
+0:http://iba-world.com/wp-content/uploads/2015/08/derby.jpg
+1:Derby
+2:All Day Cocktail
+3:6 cl Gin
+3:2 Drops Peach Bitters
+3:2 Fresh mint leafs
+2:Pour all ingredients into a mixing glass with ice. Stir. Strain into a cocktail glass. Garnish with a fresh mint leaves in the drink.
+0:http://iba-world.com/wp-content/uploads/2015/08/dry_martini.jpg
+1:Dry Martini
+2:Before Dinner Cocktail
+3:6 cl Gin
+3:1 cl Dry Vermouth
+2:Pour all ingredients into mixing glass with ice cubes. Stir well. Strain in chilled martini glass. Squeeze oil from lemon peel onto the drink, or garnish with olive.
+0:http://iba-world.com/wp-content/uploads/2015/08/gin_fizz.jpg
+1:Gin Fizz
+2:Longdrink
+3:4.5 cl Gin
+3:1 cl Sugar syrup
+3:3 cl Fresh lemon juice
+3:8 cl Soda water
+2:Shake all ingredients with ice cubes, except soda water. Pour into tumbler. Top with soda water. Garnish with lemon slice.
+0:http://iba-world.com/wp-content/uploads/2015/08/john_collins.jpg
+1:John Collins
+2:Longdrink
+3:4.5 cl Gin
+3:1.5 cl Sugar syrup
+3:3 cl Fresh lemon juice
+3:6 cl Soda water
+2:Pour all ingredients directly into highball glass filled with ice. Stir gently. Garnish with lemon slice and maraschino cherry. Add a dash of Angostura bitters. (Note: Use Old Tom Gin for Tom Collins)
+0:http://iba-world.com/wp-content/uploads/2015/08/manhattan.jpg
+1:Manhattan
+2:Before Dinner cocktail
+3:5 cl Rye Whiskey
+3:2 cl Red Vermouth
+3:1 dash Angostura Bitters
+2:Pour all ingredients into mixing glass with ice cubes. Stir well. Strain into chilled cocktail glass.Garnish with cocktail cherry.
+0:http://iba-world.com/wp-content/uploads/2015/08/mary_pickford.jpg
+1:Mary Pickford
+2:All Day Cocktail
+3:6 cl White Rum
+3:1 cl Maraschino
+3:1 cl Grenadine syrup
+3:6 cl Fresh pineapple juice
+2:Shake and strain into a chilled large cocktail glass.
+0:http://iba-world.com/wp-content/uploads/2015/08/monkey_gland.jpg
+1:Monkey Gland
+3:5 cl Gin
+3:3 cl Orange juice
+3:2 drops Absinth
+3:2 drops Grenadine
+2:Shake and strain into a chilled cocktail glass.
+0:http://iba-world.com/wp-content/uploads/2015/08/negroni.jpg
+1:Negroni
+2:Before Dinner Cocktail
+3:3 cl Gin
+3:3 cl Campari
+3:3 cl Sweet Red Vermouth
+2:Pour all ingredients directly into old-fashioned glass filled with ice. Stir gently.Garnish with half orange slice.
+0:http://iba-world.com/wp-content/uploads/2015/08/old_fashioned.jpg
+1:Old Fashioned
+2:Before Dinner Cocktail
+3:4.5 cl Bourbon or Rye whiskey
+3:2 Dashes Angostura Bitters
+3:1 sugar cube
+3:Few dashes plain water
+2:Place sugar cube in old-fashioned glass and saturate with bitters, add a dash of plain water. Muddle until dissolve. Fill the glass with ice cubes and add whiskey. Garnish with orange slice and a cocktail cherry.
+0:http://iba-world.com/wp-content/uploads/2015/08/paradise.jpg
+1:Paradise
+2:All Day Cocktail
+3:3.5 cl Gin
+3:2 cl Apricot Brandy
+3:1.5 cl Orange juice
+2:Pour all ingredients into cocktail shaker filled with ice. Shake and strain into chilled cocktail glass.
+0:http://iba-world.com/wp-content/uploads/2015/08/planters_punch.jpg
+1:Planter's Punch
+2:Longdrink
+3:4.5 cl Dark rum
+3:3.5 cl Fresh orange juice
+3:3.5 cl Fresh pineapple juice
+3:2 cl Fresh lemon juice
+3:1 cl Grenadine
+3:1 cl Sugar syrup
+3:3 to 4 dashes Angostura bitters
+2:Pour all ingredients, except the bitters, into shaker filled with ice. Shake well. Pour into large glass, filled with ice. Add Angostura bitters, “on top”. Garnish with cocktail cherry and pineapple.
+0:http://iba-world.com/wp-content/uploads/2015/08/porto_flip.jpg
+1:Porto Flip
+2:After Dinner Cocktail
+3:1.5 cl Brandy
+3:4.5 cl Red Port
+3:1 cl Egg yolk
+2:Pour all ingredients into cocktail shaker filled with ice. Shake well. Strain into cocktail glass. Sprinkle with fresh ground nutmeg.
+0:http://iba-world.com/wp-content/uploads/2015/08/ramos_fizz.jpg
+1:Ramos Gin Fizz
+2:Longdrink
+3:4.5 cl Gin
+3:3 cl Sugar syrup
+3:1.5 cl Lime juice
+3:1.5 cl Fresh lemon juice
+3:6 cl Cream
+3:1 Egg white
+3:3 dashes Orange flower water
+3:2 drops Vanilla extract
+2:Pour all ingredients (except soda) in a mixing glass, dry shake (no ice) for two minutes, add ice and hard shake for another minute. Strain into a highball glass without ice, top with soda.
+0:http://iba-world.com/wp-content/uploads/2015/08/rusty_nail.jpg
+1:Rusty Nail
+3:4.5 cl Scotch whisky
+3:2.5 cl Drambuie
+2:Pour all ingredients directly into old-fashioned glass filled with ice. Stir gently. Garnish with lemon twist.
+0:http://iba-world.com/wp-content/uploads/2015/08/sazerac.jpg
+1:Sazerac
+3:5 cl Cognac
+3:1 cl Absinthe
+3:1 sugar cube
+3:2 dashes Peychaud's bitters
+2:Rinse a chilled old-fashioned glass with the absinthe, add crushed ice and set it aside. Stir the remaining ingredients over ice and set it aside. Discard the ice and any excess absinthe from the prepared glass, and strain the drink into the glass. Add the Lemon peel for garnish.
+0:http://iba-world.com/wp-content/uploads/2015/08/screwdriver.jpg
+1:Screwdriver
+2:All Day Cocktail
+3:5 cl Vodka
+3:10 cl Orange juice
+2:Pour all ingredients into a highball glass filled with ice. Stir gently. Garnish with an orange slice.
+0:http://iba-world.com/wp-content/uploads/2015/08/sidecar.jpg
+1:Sidecar
+2:All Day Cocktail
+3:5 cl Cognac
+3:2 cl Triple Sec
+3:2 cl Fresh lemon juice
+2:Pour all ingredients into cocktail shaker filled with ice. Shake well and strain into cocktail glass.
+0:http://iba-world.com/wp-content/uploads/2015/08/stinger.jpg
+1:Stinger
+2:After Dinner Cocktail
+3:5 cl Cognac
+3:2 cl Crème de Menthe (white)
+2:Pour all ingredients into a mixing glass with ice. Stir. Strain into a cocktail glass.
+0:http://iba-world.com/wp-content/uploads/2015/08/tuxedo.jpg
+1:Tuxedo
+3:3 cl Old Tom Gin
+3:3 cl Dry Vermouth
+3:1/2 bar spoon Maraschino
+3:1/4 bar spoon Absinthe
+3:3 dashes Orange Bitters
+2:Stir all ingredients with ice and strain into cocktail glass. Garnish with a cocktail cherry and a lemon zest twist.
+0:http://iba-world.com/wp-content/uploads/2015/08/whiskey_sour.jpg
+1:Whiskey Sour
+2:Before Dinner Cocktail
+3:4.5 cl Bourbon Whiskey
+3:1.5 cl Sugar syrup
+3:3.0 cl Fresh lemon juice
+2:Pour all ingredients into cocktail shaker filled with ice. Shake well. Strain in cocktail glass. If served ‘On the rocks’, strain ingredients into old-fashioned glass filled with ice. Garnish with half orange slice and maraschino cherry.
+0:http://iba-world.com/wp-content/uploads/2015/08/white_lady.jpg
+1:White Lady
+2:All Day Cocktail
+3:4 cl Gin
+3:3 cl Triple Sec
+3:2 cl Fresh lemon juice
+2:Add all ingredients into cocktail shaker filled with ice. Shake well and strain into large cocktail glass.
