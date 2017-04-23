@@ -75,6 +75,7 @@ func ReadFile() {
 
 func Index(w http.ResponseWriter, r *http.Request) {
   db, err := sql.Open("mysql",
+    "lindjac_lindjac:@/lindjac_drinkAPI") //Password and IP Missing
   if err != nil {
     fmt.Fprintln(w, "error lol")
   }
