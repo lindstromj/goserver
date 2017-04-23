@@ -8,8 +8,10 @@ import (
 	"os"
   "strings"
 	"github.com/gorilla/mux"
+  "database/sql"
+   _ "github.com/go-sql-driver/mysql"
 )
-
+// https://github.com/go-sql-driver/mysql
 type Drink struct {
 	img  string
 	name string
@@ -61,7 +63,7 @@ func ReadFile() {
 			dir = scanner.Text()[2:]
       s := Drink{img,name,time,ing,dir}
 			a = append(a, s)
-			name = ""
+			ing = ""
 		}
 	}
 
@@ -72,7 +74,34 @@ func ReadFile() {
 }
 
 func Index(w http.ResponseWriter, r *http.Request) {
-
+  db, err := sql.Open("mysql",
+  if err != nil {
+    fmt.Fprintln(w, "error lol")
+  }
+  defer db.Close()
+  var qImg string
+  var qName string
+  var qTime string
+  var qIng string
+  var qDir string
+  var sIng string = "'%gin%'"
+  q := "SELECT * FROM drinks where ingredients like " + sIng
+  rows, err := db.Query(q)
+  if err != nil {
+    log.Fatal(err)
+  }
+  defer rows.Close()
+  for rows.Next() {
+    err = rows.Scan(&qImg, &qName, &qTime, &qIng, &qDir)
+    if err != nil {
+      log.Fatal(err)
+    }
+    fmt.Fprintln(w, qName)
+    fmt.Fprintln(w, qIng)
+  }
+  if err = rows.Err(); err != nil{
+    log.Fatal(err)
+  }
 }
 
 func TodoIndex(w http.ResponseWriter, r *http.Request) {
@@ -89,10 +118,11 @@ func GetMatches(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
   var ingArray []string
 	ingList := vars["inglist"]
+  ingList = strings.ToLower(ingList)
   ingArray = strings.Split(ingList,"+")
   for i:=0;i<len(ingArray);i++ {
 		for j:=0;j<len(a);j++ {
-			if strings.Contains(a[j].ing, ingArray[i]) {
+			if strings.Contains(strings.ToLower(a[j].ing), ingArray[i]) {
 				fmt.Fprintln(w, a[j].name)
 			}
 		}
