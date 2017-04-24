@@ -94,11 +94,12 @@ func GetMatches(w http.ResponseWriter, r * http.Request) {
     m := make(map[string]Drink)
     tfm := make(map[string]bool)
     var ingArray[] string
+		var drinkIngList[] string
     ingList := vars["inglist"]
     ingList = strings.ToLower(ingList)
     ingArray = strings.Split(ingList, "+")
     db,err := sql.Open("mysql",
-            "lindjac_lindjac:@/lindjac_drinkAPI") //Password and IP Missing
+            "lindjac_lindjac:@tcp(:3306)/lindjac_drinkAPI") //Password and IP Missing
     if err != nil {
         fmt.Fprintln(w, "error lol")
     }
@@ -129,17 +130,28 @@ func GetMatches(w http.ResponseWriter, r * http.Request) {
                   m[qName] = Drink{qImg, qName, qTime, qIng, qDir}
                 }
             }
-
             if err = rows.Err();
             err != nil {
                   log.Fatal(err)
             }
         }
     }
+		canMake := 0
     //Start
     for k, v := range m {
-
-
+	    drinkIngList = strings.Split(strings.ToLower(v.ing), ",")
+			for i:=0;i < len(drinkIngList)-1;i++ {
+				for j:=0;j < len(ingArray);j++ {
+						if (strings.Contains(drinkIngList[i], ingArray[j])) {
+								canMake++
+								break
+							}
+						}
+					}
+					if canMake == len(drinkIngList)-1{
+							fmt.Fprintln(w, "Can Make: " + k)
+					}
+					canMake = 0
+			}
     }
     //Stop
-}
