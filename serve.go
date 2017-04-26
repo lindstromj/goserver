@@ -10,14 +10,17 @@ import (
 	"github.com/gorilla/mux"
   "database/sql"
    _ "github.com/go-sql-driver/mysql"
+   "encoding/json"
+   "strconv"
+
 )
 // https://github.com/go-sql-driver/mysql
 type Drink struct {
-	img  string
-	name string
-	time string
-	ing  string
-	dir  string
+	Img  string `json:"img"`
+	Name string `json:"name"`
+	Time string `json:"time"`
+	Ing  string `json:"ing"`
+	Dir  string `json:"dir"`
 }
 
 var a []Drink
@@ -81,16 +84,17 @@ func Index(w http.ResponseWriter, r *http.Request) {
 
 func TodoIndex(w http.ResponseWriter, r *http.Request) {
   for i:=0;i<len(a);i++ {
-  fmt.Fprintln(w, a[i].img)
-  fmt.Fprintln(w, a[i].name)
-  fmt.Fprintln(w, a[i].time)
-  fmt.Fprintln(w, a[i].ing)
-  fmt.Fprintln(w, a[i].dir)
+  fmt.Fprintln(w, a[i].Img)
+  fmt.Fprintln(w, a[i].Name)
+  fmt.Fprintln(w, a[i].Time)
+  fmt.Fprintln(w, a[i].Ing)
+  fmt.Fprintln(w, a[i].Dir)
  }
 }
 
 func GetMatches(w http.ResponseWriter, r * http.Request) {
     vars := mux.Vars(r)
+    offby := 0
     m := make(map[string]Drink)
     tfm := make(map[string]bool)
     var ingArray[] string
@@ -101,7 +105,7 @@ func GetMatches(w http.ResponseWriter, r * http.Request) {
     db,err := sql.Open("mysql",
             "lindjac_lindjac:@tcp(:3306)/lindjac_drinkAPI") //Password and IP Missing
     if err != nil {
-        fmt.Fprintln(w, "error lol")
+        log.Fatal(1)
     }
     defer db.Close()
     var qImg string
@@ -136,10 +140,14 @@ func GetMatches(w http.ResponseWriter, r * http.Request) {
             }
         }
     }
-		canMake := 0
-    //Start
+
+    var finalArray []Drink
+    canMake := 0
     for k, v := range m {
-	    drinkIngList = strings.Split(strings.ToLower(v.ing), ",")
+      if k == "" {
+          log.Fatal(1)
+      }
+	    drinkIngList = strings.Split(strings.ToLower(v.Ing), ",")
 			for i:=0;i < len(drinkIngList)-1;i++ {
 				for j:=0;j < len(ingArray);j++ {
 						if (strings.Contains(drinkIngList[i], ingArray[j])) {
@@ -148,10 +156,53 @@ func GetMatches(w http.ResponseWriter, r * http.Request) {
 							}
 						}
 					}
-					if canMake == len(drinkIngList)-1{
-							fmt.Fprintln(w, "Can Make: " + k)
+					if canMake == (len(drinkIngList)-1)-offby{
+							finalArray = append(finalArray, v)
 					}
 					canMake = 0
 			}
+      col := `:`
+      comm := `,`
+      bot := `}`
+      if len(finalArray) > 0 {
+      // Print JSON
+      jsonsuccess(w, 1)
+      for i:=0;i < len(finalArray);i++ {
+          intcount, _ := json.Marshal(strconv.Itoa(i))
+          fmt.Fprint(w, string(intcount))
+          fmt.Fprintln(w, string(col))
+          b, _ := json.MarshalIndent(finalArray[i], "", "  ")
+          s := string(b)
+          if i != len(finalArray)-1 {
+            fmt.Fprintln(w, s + string(comm))
+          }else {
+            fmt.Fprintln(w, s)
+          }
+      }
+      fmt.Fprintln(w, string(bot))
+      } else {
+        jsonsuccess(w, 0)
+      }
     }
-    //Stop
+
+    func jsonsuccess(w http.ResponseWriter, i int) {
+      top := `{`
+      col := `:`
+      bot := `}`
+      comm := `,`
+      fmt.Fprintln(w, string(top))
+      bigsucc, _ := json.Marshal("Success")
+      fmt.Fprint(w, string(bigsucc))
+      fmt.Fprintln(w, string(col))
+      fmt.Fprintln(w, string(top))
+      lilsucc, _ := json.Marshal("success")
+      fmt.Fprint(w, string(lilsucc))
+      fmt.Fprint(w, string(col))
+      yon, _ := json.Marshal(strconv.Itoa(i))
+      fmt.Fprintln(w, string(yon))
+      fmt.Fprintln(w, string(bot))
+      if i == 0 {
+        fmt.Fprint(w, string(bot))
+      }
+      fmt.Fprintln(w, string(comm))
+    }
